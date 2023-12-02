@@ -3,7 +3,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link " href="index.html">
+            <a class="nav-link " href="{{ config('app_url') }}/dashboard">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
@@ -35,15 +35,21 @@
         </li><!-- End Icons Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+            <a class="nav-link collapsed" href="{{ config('app_url') }}/customer">
                 <i class="bi bi-gem"></i><span>Customers</span>
             </a>
 
         </li><!-- End Icons Nav -->
         <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-bar-chart"></i><span>Reports</span><i class="bi bi-chevron-down ms-auto"></i>
+            <a class="nav-link collapsed" href="{{ config('app_url') }}/customer">
+                <i class="bi bi-gem"></i><span>Appointments</span>
             </a>
+
+        </li><!-- End Icons Nav -->
+        <li class="nav-item">
+            {{-- <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-bar-chart"></i><span>Reports</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a> --}}
             <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="charts-chartjs.html">
@@ -58,12 +64,12 @@
 
             </ul>
         </li><!-- End Charts Nav -->
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a class="nav-link collapsed" href="{{ config('app_url') }}/userprofile">
                 <i class="bi bi-person"></i>
                 <span>Profile</span>
             </a>
-        </li><!-- End Profile Page Nav -->
+        </li><!-- End Profile Page Nav --> --}}
 
 
 

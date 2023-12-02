@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\customer;
 use App\Http\Controllers\RouteController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,9 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [RouteController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 // product route
 
 Route::get('/products', [RouteController::class, 'product'])->name('products');
@@ -29,4 +28,6 @@ Route::get('/onlinesales', [RouteController::class, 'onlineSales'])->name('onlin
 //physical sales 
 Route::get('/physicalsales', [RouteController::class, 'physicalSales'])->name('physicalsales');
 Route::get('/userprofile', [RouteController::class, 'userProfile'])->name('userprofile');
+Route::get('/onlinesales/modals/productList/{id}', [RouteController::class, 'onlineOrders']);
+Route::get('/customer', [RouteController::class, 'customer']);
 require __DIR__ . '/auth.php';

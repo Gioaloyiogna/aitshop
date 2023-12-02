@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-    @include('includes.header')
     @include('includes.styles')
+    @include('includes.header')
+
 
 </head>
 
@@ -18,7 +19,7 @@
 
 
     @include('includes.footer')
-    @include('includes.scripts')
+
 </body>
 
 </html>
